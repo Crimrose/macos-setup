@@ -83,6 +83,7 @@
       "kitty"
       "linearmouse"
       "utm"
+      "openlens"
     ];
   };
 
