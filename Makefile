@@ -19,7 +19,7 @@ default: build
 ~/.ssh/id_ed25519:
 	ssh-keygen -t ed25519 -f "$@"
 
-~/.git: ~/.ssh/id_ed25519
+~/.git:
 	cd ~ \
 		&& git init \
 		&& git config status.showUntrackedFiles no \

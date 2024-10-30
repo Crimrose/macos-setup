@@ -1,27 +1,17 @@
 { pkgs, ... }:
 
 let
-  username = "khuedoan";
+  username = "kietran";
 in
 {
   # TODO https://github.com/LnL7/nix-darwin/issues/682
-  users.users.${username}.home = "/home/${username}";
+  users.users.${username}.home = "/Users/${username}";
 
   homebrew = {
     casks = [
-      "diffusionbee"
-      "firefox"
+      "royal-tsx"
     ];
-    masApps = {
-      # Need to be signed into the Mac App Store
-      "Bitwarden" = 1352778147;
-    };
   };
-
-  # TODO clean up
-  system.activationScripts.extraUserActivation.text = ''
-    sudo pmset -a lowpowermode 1
-  '';
 
   home-manager = {
     useUserPackages = true;
@@ -32,6 +22,22 @@ in
       home.file.".config/alacritty/alacritty.yml".text = builtins.readFile ../files/alacritty.yml;
       home.file.".config/karabiner/karabiner.json".text = builtins.readFile ../files/karabiner.json;
       home.file.".config/kitty/kitty.d/macos.conf".text = builtins.readFile ../files/kitty.conf;
+
+      home.file.".zshrc".text = builtins.readFile ../files/.zshrc;
+      home.file.".zshenv".text = builtins.readFile ../files/.zshenv;
+      home.file.".p10k.zsh".text = builtins.readFile ../files/.p10k.zsh;
+      home.packages = with pkgs; [
+        argocd
+        azure-cli
+        cmctl
+        istioctl
+        jira-cli-go
+        kubelogin
+        sops
+        terragrunt
+        tflint
+        yq-go
+      ];
     };
   };
 }

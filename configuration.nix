@@ -39,6 +39,7 @@
     unzip
     watch
     zoxide
+    pyenv
 
     # Language servers
     gopls
@@ -74,6 +75,7 @@
       # { name = "homebrew/foobar"; }
     ];
     brews = [
+      "lastpass-cli"
       # "foobar"
     ];
     casks = [
@@ -89,7 +91,8 @@
       globalstate = 1;
     };
     dock = {
-      autohide = true;
+      orientation = "left";
+      autohide = false;
       minimize-to-application = true;
       mru-spaces = false;
       showhidden = true;
@@ -103,18 +106,6 @@
       NSAutomaticPeriodSubstitutionEnabled = false;
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
-    };
-    CustomUserPreferences = {
-      "com.apple.Safari" = {
-        AlwaysRestoreSessionAtLaunch = true;
-        AutoOpenSafeDownloads = false;
-        EnableNarrowTabs = false;
-        IncludeDevelopMenu = true;
-        NeverUseBackgroundColorInToolbar = true;
-        ShowFullURLInSmartSearchField = true;
-        ShowOverlayStatusBar = true;
-        ShowStandaloneTabBar = false;
-      };
     };
   };
 
