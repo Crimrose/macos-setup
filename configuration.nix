@@ -111,7 +111,6 @@
   };
 
   services = {
-    karabiner-elements.enable = true;
     tailscale.enable = true;
   };
 

@@ -1,5 +1,5 @@
 export LPASS_DISABLE_PINENTRY="1"
-
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # Plugin manager
 source $HOME/.zsh/zinit/zinit.zsh \
     || (git clone --depth 1 https://github.com/zdharma-continuum/zinit.git $HOME/.zsh/zinit && exec zsh)
