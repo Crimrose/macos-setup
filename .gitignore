@@ -1,0 +1,8 @@
+
+.vscode
+
+# Nix build directories
+result
+
+# MacOS Finder and system files
+.DS_Store
